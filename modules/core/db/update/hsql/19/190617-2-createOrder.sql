@@ -1,0 +1,2 @@
+alter table TEST3_ORDER add constraint FK_TEST3_ORDER_ON_CUSTOMER foreign key (CUSTOMER_ID) references TEST3_CUSTOMER(ID);
+create index IDX_TEST3_ORDER_ON_CUSTOMER on TEST3_ORDER (CUSTOMER_ID);

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.test3.web.screens.order">
+    <data>
+        <instance id="orderDc"
+                    class="com.company.test3.entity.Order"
+                    view="order-with-customer">
+            <loader/>
+        </instance>
+        
+                <collection id="customersDc" class="com.company.test3.entity.Customer" view="_minimal">
+                    <loader id="customersLc">
+                        <query>
+                            <![CDATA[select e from test3_Customer e]]>
+                        </query>
+                    </loader>
+                </collection>
+        
+    </data>
+    
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+    
+        
+
+<form id="form" dataContainer="orderDc">
+<column width="250px">
+	
+	<dateField id="dateField" property="date"/>
+	
+	<textField id="amountField" property="amount"/>
+	
+	<lookupPickerField id="customerField" optionsContainer="customersDc" property="customer">
+		<actions><action id="lookup" type="picker_lookup"/></actions>
+	</lookupPickerField>
+	
+</column>
+</form>
+
+        
+        
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
