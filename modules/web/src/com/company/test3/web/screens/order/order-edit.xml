@@ -8,6 +8,7 @@
                   class="com.company.test3.entity.Order"
                   view="order-edit">
             <loader/>
+            <collection id="linesDc" property="line"/>
         </instance>
         <collection id="customersDc" class="com.company.test3.entity.Customer" view="_minimal">
             <loader id="customersLc">
@@ -29,6 +30,13 @@
                         <action id="lookup" type="picker_lookup"/>
                     </actions>
                 </lookupPickerField>
+                <table id="linesTable" dataContainer="linesDc" width="400px" height="200px">
+                    <columns>
+                        <column id="product.name"/>
+                        <column id="product.price"/>
+                        <column id="quabtitu"/>
+                    </columns>
+                </table>
             </column>
         </form>
         <hbox id="editActions" spacing="true">
