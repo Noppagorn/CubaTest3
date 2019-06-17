@@ -1,11 +1,13 @@
 package com.company.test3.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+@NamePattern("%s|name")
 @Table(name = "TEST3_CUSTOMER")
 @Entity(name = "test3_Customer")
 public class Customer extends StandardEntity {

@@ -2,5 +2,6 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-test3" insertBefore="administration">
         <item screen="test3_Customer.browse"/>
+        <item screen="test3_Order.browse"/>
     </menu>
 </menu-config>

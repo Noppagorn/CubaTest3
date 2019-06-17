@@ -23,41 +23,30 @@
                 dataLoader="ordersDl">
             <properties include=".*"/>
         </filter>
-        
-<groupTable id="ordersTable"
-        width="100%"
-        dataContainer="ordersDc">
-    <actions>
-        <action id="create" type="create"/>
-    
-        <action id="edit" type="edit"/>
-    
-        <action id="remove" type="remove"/>
-    
-    </actions>
-    <columns>
-        <column id="date"/>
-    
-        <column id="amount"/>
-    
-        <column id="customer"/>
-    
-    </columns>
-    <rowsCount/>
-    <buttonsPanel id="buttonsPanel"
-                  alwaysVisible="true">
-        
-            <button id="createBtn" action="ordersTable.create"/>                
-        
-            <button id="editBtn" action="ordersTable.edit"/>                
-        
-            <button id="removeBtn" action="ordersTable.remove"/>                
-        
-    </buttonsPanel>
-</groupTable>
+        <groupTable id="ordersTable"
+                    width="100%"
+                    dataContainer="ordersDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="date"/>
+                <column id="amount"/>
+                <column id="customer"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="ordersTable.create"/>
+                <button id="editBtn" action="ordersTable.edit"/>
+                <button id="removeBtn" action="ordersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">
             <button action="lookupSelectAction"/>
             <button action="lookupCancelAction"/>
         </hbox>
-    </layout>                
+    </layout>
 </window>

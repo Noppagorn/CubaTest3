@@ -7,8 +7,14 @@
         <instance id="customerDc"
                   class="com.company.test3.entity.Customer"
                   view="_local">
-            <loader/>
+            <loader id="customerDl"/>
         </instance>
+        <collection id="ordersDc" class="com.company.test3.entity.Order">
+            <loader id="ordersDl">
+                <query><![CDATA[select e from test3_Order e
+where e.customer = :customer]]></query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -17,11 +23,19 @@
             <column width="250px">
                 <textField id="nameField" property="name"/>
                 <textField id="emailField" property="email"/>
+                <groupBox caption="Orders">
+                    <table height="100px" width="200px" dataContainer="ordersDc">
+                        <columns>
+                            <column id="date"/>
+                            <column id="amount"/>
+                        </columns>
+                    </table>
+                </groupBox>
             </column>
         </form>
         <hbox id="editActions" spacing="true">
             <button action="windowCommitAndClose"/>
-            <button action="windowClose"/>
+            <button action="windowClose" height="30px"/>
         </hbox>
     </layout>
 </window>
