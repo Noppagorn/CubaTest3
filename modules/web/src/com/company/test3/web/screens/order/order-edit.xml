@@ -24,7 +24,7 @@
         <form id="form" dataContainer="orderDc">
             <column width="250px">
                 <dateField id="dateField" property="date"/>
-                <textField id="amountField" property="amount"/>
+                <textField id="amountField" property="amount" editable="false"/>
                 <lookupPickerField id="customerField" optionsContainer="customersDc" property="customer">
                     <actions>
                         <action id="lookup" type="picker_lookup"/>
@@ -36,6 +36,16 @@
                         <column id="product.price"/>
                         <column id="quabtitu"/>
                     </columns>
+                    <actions>
+                        <action id="create" type="create"/>
+                        <action id="edit" type="edit"/>
+                        <action id="remove" type="remove"/>
+                    </actions>
+                    <buttonsPanel>
+                        <button id="createButton" action="linesTable.create"/>
+                        <button id="editButton" action="linesTable.edit"/>
+                        <button id="removeButton" action="linesTable.remove"/>
+                    </buttonsPanel>
                 </table>
             </column>
         </form>
