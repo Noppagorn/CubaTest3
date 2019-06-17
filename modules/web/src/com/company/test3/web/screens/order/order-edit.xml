@@ -6,7 +6,7 @@
     <data>
         <instance id="orderDc"
                   class="com.company.test3.entity.Order"
-                  view="order-with-customer">
+                  view="order-edit">
             <loader/>
         </instance>
         <collection id="customersDc" class="com.company.test3.entity.Customer" view="_minimal">

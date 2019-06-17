@@ -4,5 +4,7 @@
 
         <class>com.company.test3.entity.Customer</class>
         <class>com.company.test3.entity.Order</class>
+        <class>com.company.test3.entity.Product</class>
+        <class>com.company.test3.entity.OrderLine</class>
     </persistence-unit>
 </persistence>
